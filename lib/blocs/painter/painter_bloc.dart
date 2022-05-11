@@ -15,6 +15,7 @@ class PainterBloc extends Bloc<PainterEvent, PainterState> {
 
   void _onColorTapped(ColorTapped event, emit) {
     List<Tile> markedTiles = <Tile>[...state.tiles];
+
     markedTiles[event.currentTileIndex] = state.tiles
         .where((element) => element.index == event.currentTileIndex)
         .first
